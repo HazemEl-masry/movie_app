@@ -1,5 +1,7 @@
 # movie_app
 
+![Screenshot_1687436606](https://github.com/HazemEl-masry/movie_app/assets/117027676/d791657b-06be-4ecd-ba25-fd5f4c24ec80)
+
 A new Flutter project.
 
 ## Getting Started
