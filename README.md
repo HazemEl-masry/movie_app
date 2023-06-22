@@ -1,6 +1,7 @@
 # movie_app
 
-![Screenshot_1687436606](https://github.com/HazemEl-masry/movie_app/assets/117027676/d791657b-06be-4ecd-ba25-fd5f4c24ec80)
+![Screenshot_16874](https://github.com/HazemEl-masry/movie_app/assets/117027676/677df232-7fc5-47d9-94f8-0cf788ab0c05)
+
 
 A new Flutter project.
 
