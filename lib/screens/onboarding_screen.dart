@@ -3,6 +3,8 @@ import 'package:movie_app/components/custom_outline.dart';
 import 'package:movie_app/constant/constant.dart';
 import 'dart:ui';
 
+import 'package:movie_app/screens/sign_up_screen.dart';
+
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
 
@@ -137,29 +139,55 @@ class OnBoardingScreen extends StatelessWidget {
                       width: 160.0,
                       height: 38.0,
                       padding: const EdgeInsets.all(3),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20.0),
-                          gradient: LinearGradient(
-                            begin: Alignment.topLeft,
-                              end: Alignment.bottomRight,
-                              colors: [
-                                Constant.kPinkColor.withOpacity(0.3),
-                                Constant.kGreenColor.withOpacity(0.3),
-                              ]
-                          )
-                        ),
-                        child: Center(
-                          child: Text(
-                              "Sign up",
-                            style: TextStyle(
-                              fontSize: 15.0,
-                              color: Constant.kWhiteColor,
-                              letterSpacing: 0.37
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => const SignUp(),));
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20.0),
+                            gradient: LinearGradient(
+                              begin: Alignment.topLeft,
+                                end: Alignment.bottomRight,
+                                colors: [
+                                  Constant.kPinkColor.withOpacity(0.3),
+                                  Constant.kGreenColor.withOpacity(0.3),
+                                ]
+                            )
+                          ),
+                          child: Center(
+                            child: Text(
+                                "Sign up",
+                              style: TextStyle(
+                                fontSize: screenWidth<=660? 15:17,
+                                color: Constant.kWhiteColor,
+                                letterSpacing: 0.37
+                              ),
                             ),
                           ),
                         ),
                       ),
+                  ),
+                  const Spacer(),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: List.generate(3, (index) {
+                      return Container(
+                        width: 20.0,
+                        height: 6.0,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: index == 0?
+                              Constant.kGreenColor :
+                              index == 1?
+                                  Constant.kWhiteColor.withOpacity(0.3) :
+                                  Constant.kWhiteColor.withOpacity(0.3)
+                        ),
+                      );
+                    }),
+                  ),
+                  SizedBox(
+                    height: screenHight*0.025,
                   )
                 ],
               ),
